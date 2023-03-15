@@ -9,12 +9,11 @@ app.get('/', (req, res) => {
 
 app.get('/download', (req, res) => {
   const url = req.query.url;
+  console.log("Download:"+url)
   try{
-    console.log("Download:"+url)
     res.header('Content-Disposition', 'attachment; filename="video.mp4"');
     ytdl(url, { format: 'mp4' }).pipe(res);
   }catch(e){
-    console.log("Error"+e)
   }
 });
 
