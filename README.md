@@ -1,5 +1,8 @@
-##yt-dl-slim
+yt-dl-slim
 -----
+
+結構ゴリゴリに軽くした動画ダウンローダー。
+
 実行:
 ``npm install``
 ``npm run start``
