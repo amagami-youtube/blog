@@ -2,13 +2,648 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Youtube Downloader</title>
+    <title>htmlタグ一覧</title>
   </head>
   <body>
+    <h1>htmlタグ一覧</h1>
+    <h3>目次</h3>
+    <ul>
+      <li>基本構想          html head body !-- --</li>
+      <li>ヘッダー          title isindex base meta link script</li>
+      <li>ページレイアウト   hn hr br p center div pre blockquote address noscript</li>
+      <li>フォント          font basefont i tt b u strikebig small sub sup em strong code samp kbd var cite</li>
+      <li>リスト            ul ol li dl dt dd</li>
+      <li>表               table tr th td caption</li>
+      <li>ハイパーリンク    a</li>
+      <li>イメージ         img map area</li>
+      <li>フォーム         form input select option textarea</li>
+      <li>Java            applet param</li>
+      <li>フレーム         frameset frame noframes</li>
+      <li>特殊記号         &quote; &amp; &lt; &gt; &nbsp; &copy;</li>
+      <br>
+      <table width="100%">
+  <tr>
+    <td bgcolor="#FFC0CB" align=center><a name=kihon>基本構造</a></td>
+  </tr>
+</table>  
+
+<table>
+<tr>
+  <td width=150><font color="red">&lt;html&gt; &lt;/html&gt;</font></td>
+  <td>HTML文書</td>
+</tr>
+<tr>
+  <td><font color="red">&lt;head&gt; &lt;/head&gt;</font></td>
+  <td>ヘッダー</td>
+</tr>
+<tr>
+  <td valign=top><font color="red">&lt;body&gt; &lt;/body&gt;</font></td>
+  <td><pre>ボディ（本文）文書全体のデザインを設定
+  background="filename" 背景のタイルイメージを指定
+  bgcolor   =#rrggbb or colorname 背景の色
+  text      =#rrggbb or colorname テキストの色
+  link      =#rrggbb or colorname リンクの色
+  vlink     =#rrggbb or colorname アクセス済みのリンク色
+  alink     =#rrggbb or colorname アクセス中のリンクの色<span class="gray">
+  onLoad    =code  HTMLファイルの読み込み完了時に実行するイベントハンドラ
+  onUnload  =code  HTMLファイルの表示終了時に実行するイベントハンドラ</span></pre>
+  </td>
+</tr>
+  <table width="100%">
+  <tr>
+    <td bgcolor="#FFC0CB" align=center> <a name=header>ヘッダー HEADER</a> </td>
+  </tr>
+</table>
+
+<table>
+<tr>
+  <td width=150><font color="red">&lt;title&gt; &lt;/title&gt;</font></td>
+  <td>タイトル</td>
+</tr>
+<tr>
+  <td valign=top><font color="red">&lt;isindex&gt; &lt;/isindex&gt;</font></td>
+  <td><pre>キーワード検索
+  prompt=&quot;キーワード入力ボックスのプロンプト&quot;
+  action=&quot;CGIプログラムのURL&quot;</pre>
+  </td>
+</tr>
+<tr>
+  <td valign=top><font color="red">&lt;base&gt; &lt;/base&gt;</font></td>
+  <td><pre>基準URL　相対パスのURLは，ここでの設定が基準となる
+  href="基準となるURL"
+  <span class="gray">target="表示先の基準となるフレーム名"</span></pre></td>
+</tr>
+<tr>
+  <td valign=top><font color="red">&lt;meta&gt; &lt;/meta&gt;</font></td>
+  <td><pre>文書情報
+  http-equiv="Content-Type" MIMEタイプ，文字コードセットを指定
+              expires　　   文書の有効期限を指定
+              keywords　    文書のキーワード
+              refresh       文書の自動読み込み設定
+
+  name=      "author"       著者
+              keywords      キーワード
+              description   文書内容
+              robots        検索ロボットの制御
+
+  content=   "DATA"         http-equiv, name のプロパティ指定（必須）。データの区切りは";"</pre>
+  </td>
+</tr>
+<tr>
+  <td valign=top><font color="red">&lt;link&gt; &lt;/link&gt;</font></td>
+  <td><pre>文書の前後関係などを定義
+  href=url
+  rel=link_type  複数文書間の順方向の関係を定義
+  rev=link_type  複数文書間の逆方向の関係を定義
+  type=　　　　　スタイルシートの形式</pre>
+  </td>
+</tr>
+<tr>
+  <td valign=top><font color=gray>&lt;script&gt; &lt;/script&gt;</font></td>
+  <td><pre><span class="gray">使用するスクリプト言語を宣言する
+  language = JavaScript , VBScript など</span></pre></td>
+</tr>
+  <table width="100%">
+  <tr>
+    <td bgcolor="#FFC0CB" align=center><a name=page>ページレイアウト関連</a></td>
+  </tr>
+</table>  
+
+<table>
+<tr>
+  <td width=150 valign=top><font color="red">&lt;hn&gt; &lt;/hn&gt;</font></td>
+  <td><pre>見出し文字（n=1 最大 ～ n=6 最小）</pre></td>
+</tr>
+<tr>
+  <td valign=top><font color="red">&lt;hr&gt; </font></td>
+  <td><pre>横罫線を引く
+  width = n, n%  線の長さ（pixel or %)
+  size  = n      線の太さ（pixel）
+  align = left , center , right
+  noshade　      平面的に表示</pre>
+  </td>
+</tr>
+<tr>
+  <td valign=top><font color="red">&lt;br&gt;</font></td>
+  <td><pre>強制改行
+  clear = all , left , right　イメージに対するテキストの回り込みを解除する</pre>
+  </td>
+</tr>
+<tr>
+  <td valign=top><font color="red">&lt;p&gt; </font><font color="#FFA500">&lt;/p&gt;</font></td>
+  <td><pre>段落
+  align = left, center, right</pre></td>
+</tr>
+<tr>
+  <td valign=top><font color="red">&lt;center&gt; &lt;/center&gt;</font></td>
+  <td><pre>センタリング</pre></td>
+</tr>
+<tr>
+  <td valign=top><font color="red">&lt;div&gt; &lt;/div&gt;</font></td>
+  <td><pre>分割テキスト（左・中央・右揃え）
+  align = left, center, right</pre></td>
+</tr>
+<tr>
+  <td valign=top><font color="red">&lt;pre&gt; &lt;/pre&gt;</font></td>
+  <td><pre>整形済みテキスト（改行やタブをそのまま表示）</pre></td>
+</tr>
+<tr>
+  <td valign=top nowrap><font color="red">&lt;blockquote&gt; &lt;/blockquote&gt;</font></td>
+  <td><pre>ブロック引用（上下に空白行，左右がインデントされる）</pre></td>
+</tr>
+<tr>
+  <td valign=top><font color="red">&lt;address&gt; &lt;/address&gt;</font></td>
+  <td><pre> アドレス情報（イタリック体で表示される）</pre></td>
+</tr>
+<tr>
+  <td valign=top><font color=gray>&lt;noscript&gt; &lt;/noscript&gt;</font></td>
+  <td><font color="gray"> スクリプト言語未対応ブラウザで表示される範囲を指定</font></td>
+</tr>
+<tr>
+  <td></td>
+  <td><br><a href="page.html">ページレイアウトの例</a></td>
+</tr>
+</table>
+
+<div align=right><a href="#top">to TOP</a></div>
+
+
+
+
+
+
+<table width="100%">
+  <tr>
+    <td bgcolor="#FFC0CB" align=center><a name=font>フォント関連</a></td>
+  </tr>
+</table>
+
+<table>
+<tr>
+  <td width=150 valign=top><font color="red">&lt;font&gt; &lt;/font&gt;</font></td>
+  <td><pre>フォント
+  size=n   最大はn=7
+  size=±n  basefontに対する相対値 n=1～6
+  color=#rrggbb, colorname フォント色指定</pre></td>
+</tr>
+<tr>
+  <td valign=top><font color="red">&lt;basefont&gt;</font></td>
+  <td><pre>ベースフォント
+  size = n</pre></td>
+</tr>
+<tr><td><font color="red">&lt;i&gt; &lt;/i&gt;</font></td>
+    <td><i>イタリック体</i></td>
+</tr>
+<tr><td><font color="red">&lt;tt&gt; &lt;/tt&gt;</font></td>
+    <td><tt>等幅フォント</tt></td>
+</tr>
+<tr><td><font color="red">&lt;b&gt; &lt;/b&gt;</font></td>
+    <td><b>ボールド</b></td>
+</tr>
+<tr><td><font color="red">&lt;u&gt; &lt;/u&gt;</font></td>
+    <td><u>アンダーライン</u></td>
+</tr>
+<tr><td><font color="red">&lt;strike&gt; &lt;/strike&gt;</font></td>
+    <td><strike>打ち消し線</strike></td>
+</tr>
+<tr><td><font color="red">&lt;big&gt; &lt;/big&gt;</font></td>
+    <td><big>大きめのフォント</big></td>
+</tr>
+<tr><td><font color="red">&lt;small&gt; &lt;/small&gt;</font></td>
+    <td><small>小さめのフォント</small></td>
+</tr>
+<tr><td><font color="red">&lt;sub&gt; &lt;/sub&gt;</font></td>
+    <td>下付文字　H<sub>2</sub>O</td>
+</tr>
+<tr><td><font color="red">&lt;sup&gt; &lt;/sup&gt;</font></td>
+    <td>上付文字　x<sup>2</sup>+y<sup>2</sup>=9</td>
+</tr>
+<tr><td><font color="red">&lt;em&gt; &lt;/em&gt;</font></td>
+    <td><em>強調文字</em></td>
+</tr>
+<tr><td><font color="red">&lt;strong&gt; &lt;/strong&gt;</font></td>
+    <td><strong>強い強調</strong></td>
+</tr>
+<tr><td><font color="red">&lt;code&gt; &lt;/code&gt;</font></td>
+    <td>プログラムコード <code>PROGRAM CODES</code></td>
+</tr>
+<tr><td><font color="red">&lt;samp&gt; &lt;/samp&gt;</font></td>
+    <td><samp>USED FOR SAMPLE OUTPUT</samp></td>
+</tr>
+<tr><td><font color="red">&lt;kbd&gt; &lt;/kbd&gt;</font></td>
+    <td><kbd>KEYBOARD TYPED</kbd></td>
+</tr>
+<tr><td><font color="red">&lt;var&gt; &lt;/var&gt;</font></td>
+    <td><var>変数名 variables</var></td>
+</tr>
+<tr><td><font color="red">&lt;cite&gt; &lt;/cite&gt;</font></td>
+    <td><cite>引用　used for citations</cite></td>
+</tr>
+</table>
+  <table width="100%">
+  <tr>
+    <td bgcolor="#FFC0CB" align=center><a name=list>リスト（箇条書き）</a></td>
+  </tr>
+</table>
+
+<table>
+<tr>
+  <td width=150 valign=top><font color="red">&lt;ul&gt; &lt;/ul&gt;</font></td>
+  <td><pre>番号なしリスト Unnumbered List
+  type=disk, circle, square　　行頭記号の種類設定</pre></td>
+</tr>
+<tr>
+  <td valign=top><font color="red">&lt;ol&gt; &lt;/ol&gt;</font></td>
+  <td><pre>番号付きリスト Ordered List
+  type=1, a, A, i, I 　　　　　行頭番号の種類設定
+  start=n　　開始番号（数値）</pre></td>
+</tr>
+<tr>
+  <td valign=top><font color="red">&lt;li&gt;</font> <font color="#FFA500">&lt;/li&gt;</font></td>
+  <td><pre>リスト項目
+  type=disk, circle, square　　(&lt;ul&gt; &lt;/ul&gt;の場合のみ)
+  type=1, a, A, i, I　　(&lt;ol&gt; &lt;/ol&gt;の場合のみ）
+  value=n　　開始番号（数値）</pre></td>
+</tr>
+<tr><td><font color="red">&lt;dl&gt; &lt;/dl&gt;</font></td>
+    <td>定義型リスト Definition Lists</td>
+</tr>
+<tr><td><font color="red">&lt;dt&gt;</font> <font color="#FFA500">&lt;/dt&gt;</font></td>
+    <td>定義語　 Term name</td>
+</tr>
+<tr><td><font color="red">&lt;dd&gt;</font> <font color="#FFA500">&lt;/dd&gt;</font></td>
+    <td>定義内容 Term Definition</td>
+</tr>
+<tr><td></td>
+</tr>
+
+</table>
+  <table width="100%">
+  <tr>
+    <td bgcolor="#FFC0CB" align=center><a name=table>表（TABLE)</a></td>
+  </tr>
+</table>
+
+<table width="100%">
+<tr>
+  <td width=150 valign=top><font color="red">&lt;table&gt; &lt;/table&gt;</font></td>
+  <td><pre>表組み
+  align=left, center, right
+  border=n　     表の外枠の太さ（pixel default:1）
+  width=n, n%    表の幅（pixel or %）
+  height=n, n%   表の高さ（pixel or %）
+  cellspacing=n  表の枠の太さ（pixel default:2）
+  cellpadding=n  枠と文字の間隔（pixel default:1）</pre></td>
+</tr>
+<tr>
+  <td valign=top><font color="red">&lt;tr&gt;</font><font color="#FFA500"> &lt;/tr&gt;</font></td>
+  <td><pre>表の行
+  align=left, center, right　左右の配置
+  valign=top, middle, bottom 　上下の配置</pre></td>
+</tr>
+<tr>
+  <td valign=top><font color="red">&lt;th&gt;</font><font color="#FFA500"> &lt;/th&gt;</font></td>
+  <td><pre>表の見出し要素（字体がボールドになる）
+  width=n　　セルの幅
+  height=n　 セルの高さ
+  rowspan=n　複数行にまたがるセルの指定
+  colspan=n　複数列にまたがるセルの指定
+  nowrap　　 セル内折り返し禁止
+  align=left, center, right　　左右配置(default:center)
+  valign=top, middle, bottom   上下配置(default:middle)
+  <span style="color:gray">bgcolor=#rrggbb , colorname  セルの背景色</span></pre></td>
+</tr>
+<tr>
+  <td valign=top><font color="red">&lt;td&gt;</font><font color="#FFA500"> &lt;/td&gt;</font></td>
+  <td><pre>表のデータ要素
+  width=n　　セルの幅
+  height=n　 セルの高さ
+  rowspan=n　複数行にまたがるセルの指定
+  colspan=n　複数列にまたがるセルの指定
+  nowrap　　 セル内折り返し禁止
+  align=left, center, right　　左右配置(default:left)
+  valign=top, middle, bottom   上下配置(default:middle)
+  <span style="color:gray">bgcolor=#rrggbb , colorname  セルの背景色</span></pre></td>
+</tr>
+
+<tr>
+  <td valign=top><font color="red">&lt;caption&gt; &lt;/caption&gt;</font></td>
+  <td><pre>表題
+  align=top, bottom 　(default:top)</pre></td>
+</tr>
+<tr><td></td>
+    <td><a href="table.html">表の例</a></td>
+</tr>
+</table>
+<div align=right><a href="#top">to TOP</a></div>
+
+
+
+
+
+
+<table width="100%">
+  <tr>
+    <td bgcolor="#FFC0CB" align=center><a name=anchor>ハイパーリンク</a></td>
+  </tr>
+</table>
+
+<table width="100%">
+<tr>
+  <td width=150 valign=top><font color="red">&lt;a&gt; &lt;/a&gt;</font></td>
+  <td><pre>アンカー　Anchor
+  href=&quot;url&quot;　　　　 リンク先のURL
+  href=&quot;#marker_name&quot;　ページ内のアンカーに飛ぶ
+  href=&quot;mailto:your@mail.address&quot;　メール機能呼び出し
+
+  name=&quot;marker_name&quot;　 ページ内にアンカーを設定 
+  <span style="color:gray">
+  target=frame_name　表示するフレームを指定
+  target=top　　　　 別ウィンドウを開いて表示
+  target=_top　　　  フレームを解除して表示
+  </span></pre>
+  <a href="a.html">ハイパーリンクの例</a></td>
+</tr>
+
+</table>
+<div align=right><a href="#top">to TOP</a></div>
+
+
+
+
+
+
+<table width="100%">
+  <tr>
+    <td bgcolor="#FFC0CB" align=center><a name=image>イメージ（画像）関連</a></td>
+  </tr>
+</table>
+
+<table>
+<tr>
+  <td width=150 valign=top><font color="red">&lt;img&gt;</font></td>
+  <td><pre>イメージ Inline Image
+  src="url" 表示するイメージのURL
+  alt="text"  画像を表示できないときの説明
+  align=top　　　 テキストを画像の上端に合わせる
+  　    middle                    中央に
+        bottom                    下端に
+        left　　　画像を左に配置しテキストを回り込ませる
+        right　　 　　　右に配置し
+  width=n, n% 　　画像の幅
+  height=n, n%　　画像の高さ
+  border=n　　　　枠線の太さ
+  hspace=n　　　　画像左右のスペース
+  vspace=n　　　　画像上下のスペース
+  usemap=url#map_name クライアントサイド・イメージマップ
+  ismap=url#map_name  サーバーサイド・イメージマップ</pre></td>
+</tr>
+<tr>
+  <td valign=top><font color="red">&lt;map&gt; &lt;/map&gt;</font></td>
+  <td><pre>イメージマップの指定
+  name=map_name（必須 usemapで指定したmap_name）</pre></td>
+</tr>
+<tr>
+  <td valign=top><font color="red">&lt;area&gt;</font></td>
+  <td><pre>イメージマップデータ　&lt;map&gt; &lt;/map&gt;内でリンク先を指定
+  shape=rect　　リンク領域形状 四角形
+        circle　　　　　　　　 円形
+        poly　　　　　　　　　 多角形
+  coords="x1,y1,x2,y2"　　四角形の場合”左上と右下の座標”
+         "x,y,r"　　　　  円形の場合　”中心の座標，半径”
+  　　　 "x1,y1,x2,y2,.." 多角形の場合左上から反時計回りに頂点の座標
+  href="url"　 指定したareaでのリンク先
+  alt="text"　 イメージの内容を記述</pre>
+  <br>
+  <a href="img.html">&lt;IMG&gt;タグのオプション解説</a>　
+  <a href="imagemap.html">クリッカブル・マップの例</a>
+  </td>
+</tr>
+
+</table>
+<div align=right><a href="#top">to TOP</a></div>
+
+
+
+
+
+
+<table width="100%">
+  <tr>
+    <td bgcolor="#FFC0CB" align=center><a name=form>フォーム</a></td>
+  </tr>
+</table>
+
+<table>
+<tr>
+  <td width=180 valign=top><font color="red">&lt;form&gt; &lt;/form&gt;</font></td>
+  <td><pre>フォーム
+  action="処理するCGIプログラムのURL"
+        ="mailto:address"
+  method="POST", "GET" 
+  enctype="multipart/form-data"
+  　　内容を文字コードに合わせてエンコードして送信</pre></td>
+</tr>
+
+<tr>
+  <td valign=top><font color="red">&lt;input&gt;</font></td>
+  <td><pre>入力エリアの作成
+  type=text　　　テキストフィールド（デフォルト）
+       password　パスワードフィールド
+       checkbox　チェックボックス
+       radio　　 ラジオボタン
+       submit　　送信ボタン
+       image　　 グラフィカル送信ボタン
+       reset　　 リセットボタン
+       file　　　ファイル名入力
+       hidden　　隠蔽フィールド
+  name=　　    　入力フィールド名
+  value=　     　データのデフォルト値，ボタン名
+  checked      　type=checkbox, radio のデフォルトチェック
+  size=n       　type=text, file の入力フィールド幅 (default:20)
+  maxlength=n  　type=text, password 時に入力できる最大文字数
+
+  src=url　    グラフィカル送信ボタンのイメージURL
+  align=top, middle, bottom, left, right
+  　　　       グラフィカル送信ボタン時のテキスト配置</pre></td>
+</tr>
+
+<tr>
+  <td valign=top><font color="red">&lt;select&gt; &lt;/select&gt;</font></td>
+  <td><pre>選択メニュー
+  name=　　 selectメニュー名（必須）
+  size=n    複数表示時の行数
+  multiple　複数項目の選択を許可</pre></td>
+</tr>
+
+<tr>
+  <td valign=top><font color="red">&lt;option&gt; </font><font color="#FFA500">&lt;/option&gt;</font></td>
+  <td><pre>&lt;select&gt; &lt;/select&gt;内で選択項目を指定
+  selected　　　デフォルトで選択された状態にしておく
+  value="text"  選択項目の代わりに送信したいデータ</pre></td>
+</tr>
+
+<tr>
+  <td valign=top><font color="red">&lt;textarea&gt; &lt;/textarea&gt;</font></td>
+  <td><pre>複数行テキスト入力フィールド
+  name=　　テキストフィールド名
+  rows=n   縦サイズ（行数）
+  cols=n   横サイズ（１行文字数）<span style="color:gray">
+  wrap=soft   横サイズに合わせて改行（画面表示のみ）
+       hard　 横サイズに合わせて改行（送信時に改行コード付加）
+       off    改行なし（デフォルト）</span></pre>
+  <a href="form.html">フォームの例</a>　
+
+</td>
+</tr>
+</table>
+<div align=right><a href="#top">to TOP</a></div>
+
+
+
+
+
+
+<table width="100%">
+  <tr>
+    <td bgcolor="#FFC0CB" align=center><a name=java>JAVA</a></td>
+  </tr>
+</table>
+
+<table>
+<tr>
+  <td width=150 valign=top><font color="red">&lt;applet&gt; &lt;/applet&gt;</font></td>
+  <td><pre>Java Appletの設定
+  codebase=&quot;Java AppletのURL&quot;
+  code=&quot;Java Appletのclassファイル&quot;　（必須）
+  alt=&quot;Java未対応ブラウザ用代用テキスト&quot;
+  name=&quot;Java Applet名&quot;
+  width=n, n%　（必須）
+  height=n, n% （必須）
+  align=top, middle, bottom, left, right
+  hspace=n
+  vspace=n</pre></td>
+</tr>
+<tr>
+  <td valign=top><font color="red">&lt;param&gt; &lt;/param&gt;</font></td>
+  <td><pre>Java Appletのパラメータ
+  name=&quot;パラメータ名&quot; （必須）
+  value=&quot;パラメータの値&quot; </pre></td>
+</tr>
+
+</table>
+
+<div align=right><a href="#top">to TOP</a></div>
+
+
+
+
+
+
+<table width="100%">
+  <tr>
+    <td bgcolor="#FFC0CB" align=center><a name=frame>フレーム（HTML3.2には含まれません）</a></td>
+  </tr>
+</table>
+
+<table>
+<tr>
+  <td width=150 valign=top><font color=gray>&lt;frameset&gt; &lt;/frameset&gt;</font></td>
+  <td><pre><span class="gray">フレーム設定
+  
+  rows="n1,n2,*"   フレームの高さ(pixel)
+       "n1%,n2%,*"               (%) *は残りの割合
+  cols="n1,n2,*"   フレームの幅(pixel)
+       "n1%,n2%,*"             (%)
+  frameborder=yes, no  (default:yes)</span></pre></td>
+</tr>
+<tr>
+  <td valign=top><span class="gray">&lt;frame&gt; &lt;/frame&gt;</span></td>
+  <td><pre><span class="gray">フレームに表示するデータを設定
+  src=&quot;フレームに表示するデータのURL&quot;
+  name=&quot;フレーム名&quot;
+  marginwidth=n　 フレーム内左マージン(pixel)
+  marginheight=n  フレーム内上マージン(pixel)
+  scrolling=yes, no, auto   スクロールバーの表示(default:auto)
+  noresize　　フレームサイズを固定 </span></pre></td>
+</tr>
+<tr>
+  <td valign=top><font color=gray>&lt;noframes&gt; &lt;/noframes&gt;</font></td>
+  <td><pre><span class="gray">フレーム未対応ブラウザでの表示</span>
+  </pre>
+  <a href="frame.html">フレームの例</a></td>
+</tr>
+</table>
+
+<div align=right><a href="#top">to TOP</a></div>
+
+
+
+
+
+
+<table width="100%">
+  <tr>
+    <td bgcolor="#00FFFF" align=center><a name=tokushu>特殊文字</a></td>
+  </tr>
+</table>
+
+<table align=center width=240>
+  <tr>
+    <th>文字　　</th>
+    <th>文字名　　</th>
+    <th>文字コード</th>
+  </tr>
+  <tr>
+    <td align=center>&quot;</td>
+    <td align=center>&amp;quot;</td>
+    <td align=center>&amp;#34;</td>
+  </tr>
+  <tr>
+    <td align=center>&amp;</td>
+    <td align=center>&amp;amp;</td>
+    <td align=center>&amp;#38</td>
+  </tr>
+  <tr>
+    <td align=center>&lt;</td>
+    <td align=center>&amp;lt;</td>
+    <td align=center>&amp;#60</td>
+  </tr>
+  <tr>
+    <td align=center>&gt;</td>
+    <td align=center>&amp;gt;</td>
+    <td align=center>&amp;#62</td>
+  </tr>
+  <tr>
+    <td align=center>スペース</td>
+    <td align=center>&amp;nbsp;</td>
+    <td align=center>&amp;#160</td>
+  </tr>
+  <tr>
+    <td align=center>&copy;</td>
+    <td align=center>&amp;copy;</td>
+    <td align=center>&amp;#169</td>
+  </tr>
+</table>
+
+<div align=right><a href="#top">to TOP</a></div>
+
+
+<hr>
+
+<table width="100%">
+  <tr>
+    <td bgcolor=yellow align=center><a name=about>この一覧について</a></td>
+  </tr>
+</table>
+  <h3>コメントを書く</h3>
+  <form action="hoge.cgi" method="POST" enctype="multipart/form-data">
+内容：<input name="jusho" size=40><br>
+氏名：<input name="address" size=20><br>
     <form action="/download" method="get">
       <label for="url">Youtube URL: https://youtube.com/watch?v=</label>
-      <input type="text" id="url" name="url">
-      <input type="submit" value="Download">
+      WebサイトURL：<input type="text" id="url" name="url">
+      <input type="submit" value="送信">
     </form>
   </body>
 </html>
